@@ -19,7 +19,19 @@ void main() {
   print("Enter a number:");
   int num = int.parse(stdin.readLineSync()!);
 
-  int digit1 = num % 10;
-  int digit2 = (num ~/ 10) % 10;
-  int 
+  int originalnum = num;
+  int reversednum = 0;
+
+  while (num > 0) {
+    int digit = num % 10;
+    reversednum = reversednum * 10 + digit;
+    num = num ~/ 10;
+  }
+  if (originalnum == reversednum) {
+    print("the reverse of $originalnum is $reversednum");
+    print("It is a palindrome number");
+  } else {
+    print("the reverse of $originalnum is $reversednum");
+    print("It is not a palindrome number");
+  }
 }
