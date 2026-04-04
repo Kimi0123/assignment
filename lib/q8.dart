@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   print("Enter your word:");
-  String word = stdin.readLineSync()!;
+  String? word = stdin.readLineSync()!;
 
   int vowels = 0;
   int consonants = 0;
